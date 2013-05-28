@@ -4,6 +4,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.orm.hibernate3.HibernateExceptionTranslator;
+import org.springframework.orm.jpa.JpaTransactionManager;
 import play.Application;
 import play.GlobalSettings;
 
@@ -78,6 +79,11 @@ public class Global extends GlobalSettings {
         @Bean
         public HibernateExceptionTranslator hibernateExceptionTranslator() {
             return new HibernateExceptionTranslator();
+        }
+
+        @Bean
+        public JpaTransactionManager transactionManager() {
+            return new JpaTransactionManager();
         }
     }
 }
