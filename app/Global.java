@@ -12,7 +12,8 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
 /**
- * Application wide behaviour.
+ * Application wide behaviour. We establish a Spring application context for the dependency injection system and
+ * configure Spring Data.
  */
 public class Global extends GlobalSettings {
 

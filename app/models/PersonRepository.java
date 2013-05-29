@@ -6,7 +6,8 @@ import javax.inject.Named;
 import javax.inject.Singleton;
 
 /**
- * Provides CRUD functionality for accessing people.
+ * Provides CRUD functionality for accessing people. Spring Data auto-magically takes care of many standard
+ * operations here.
  */
 @Named
 @Singleton

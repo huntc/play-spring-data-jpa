@@ -15,7 +15,9 @@ object ApplicationBuild extends Build {
     "javax.inject" % "javax.inject" % "1",
 
     "org.springframework.data" % "spring-data-jpa" % "1.3.2.RELEASE",
-    "org.hibernate" % "hibernate-entitymanager" % "3.6.10.Final"
+    "org.hibernate" % "hibernate-entitymanager" % "3.6.10.Final",
+
+    "org.mockito" % "mockito-core" % "1.9.5" % "test"
   )
 
   val main = play.Project(appName, appVersion, appDependencies).settings(
