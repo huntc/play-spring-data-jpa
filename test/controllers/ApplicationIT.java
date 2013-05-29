@@ -26,7 +26,6 @@ public class ApplicationIT extends WithApplication {
     private static final CharSequence SOME_CONTENT_MESSAGE = "Found id: 1 of person/people";
 
     private Application app;
-    private GlobalSettings global;
 
     @Mock
     private PersonRepository repo;
@@ -35,7 +34,7 @@ public class ApplicationIT extends WithApplication {
     public void setUp() throws Exception {
         app = new Application(repo);
 
-        global = new GlobalSettings() {
+        final GlobalSettings global = new GlobalSettings() {
             @Override
             public <A> A getControllerInstance(Class<A> aClass) {
                 return (A) app;
